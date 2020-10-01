@@ -1,17 +1,17 @@
-
+export const catalog = () => {
+    
 // day1
-'use strict';
+
 const btnBurger = document.querySelector('.btn-burger');
 const catalog = document.querySelector('.catalog');
 const btnClose = document.querySelector('.btn-close');
-const catalogList = document.querySelector('.catalog-list');
 const subCatalog = document.querySelector('.subcatalog');
 const subCatalogHeader = document.querySelector('.subcatalog-header');
 const btnReturn = document.querySelector('.btn-return');
 
 const overlay = document.createElement('div');
 overlay.classList.add('overlay');
-document.body.insertAdjacentElement('beforeend', overlay);
+document.body.append(overlay);
 
 const openMenu = () => {  
     catalog.classList.add('open');
@@ -46,5 +46,8 @@ document.addEventListener('keydown', (event) => {
 btnBurger.addEventListener('click', openMenu);
 btnClose.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
-catalogList.addEventListener('click', openSubMenu);
+catalog.addEventListener('click', openSubMenu);
+btnReturn.addEventListener('click', closeSubMenu);
 
+
+};

@@ -42,7 +42,7 @@ const generateFooter = () => {
     </footer>
     `;
 
-    document.body.insertAdjacentHTML('beforeend', footer);
+    document.body.insertAdjacentHTML('beforeend', footer); // вставляем в конце
 };
 
-generateFooter();
+export default generateFooter;
